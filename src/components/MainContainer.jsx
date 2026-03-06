@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner from "./Banner";
 import Container from "./Container";
 import EachStudent from "./EachStudent";
 
 const MainContainer = ({ students }) => {
   //   console.log(students);
+
+  //   const [newData, setNewData] = useState(students);
+  //   console.log(newData);
 
   return (
     <div>
@@ -13,7 +16,7 @@ const MainContainer = ({ students }) => {
         <div className="min-h-125 border-2  grid grid-cols-10 gap-10">
           <div className=" col-span-full lg:col-span-7 space-y-3">
             <p className="text-2xl font-bold">Customer Ticket</p>
-            <div className="bg-blue-400 mt-4 p-1.5 grid grid-cols-1 lg:grid-cols-2 gap-6 ">
+            <div className=" mt-4 p-3 grid grid-cols-1 lg:grid-cols-2 gap-6 ">
               {students.map((student) => (
                 <EachStudent key={student.id} student={student}></EachStudent>
               ))}

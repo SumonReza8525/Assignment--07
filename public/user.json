@@ -30,7 +30,7 @@
     "id": 1004,
     "title": "Profile Image Not Updating",
     "desc": "User tries to upload a new profile image but it does not update.",
-    "status": "Pending",
+    "status": "Resolved",
     "priority": "Low",
     "user": "Sophia Davis",
     "date": "2024-11-18"
@@ -66,7 +66,7 @@
     "id": 1008,
     "title": "Search Feature Not Working",
     "desc": "Users cannot find results when searching for products.",
-    "status": "Pending",
+    "status": "Resolved",
     "priority": "Medium",
     "user": "Isabella Thomas",
     "date": "2024-11-22"

@@ -53,7 +53,7 @@ const Footer = () => {
 
           {/* div 5 */}
           <div>
-            <ul className="text-gray-300 space-3">
+            <ul className="text-gray-300 space-y-3">
               <li className="text-white font-bold text-xl">Social Links</li>
               <li className="flex gap-1.5">
                 <img src={tLogo} alt="" />

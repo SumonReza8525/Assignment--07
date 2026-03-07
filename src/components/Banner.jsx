@@ -13,7 +13,7 @@ const Banner = ({ progressData, resolvedData }) => {
           className="absolute right-0 top-0 h-full scale-x-[-1]"
         />
 
-        <div className="relative z-10 text-white text-center flex flex-col justify-center items-center border-2 h-full">
+        <div className="relative z-10 text-white text-center flex flex-col justify-center items-center h-full">
           <p className="text-lg">In Progress</p>
           <p className="text-6xl font-bold">{progressData.length}</p>
         </div>
@@ -27,7 +27,7 @@ const Banner = ({ progressData, resolvedData }) => {
           className="absolute right-0 top-0 h-full scale-x-[-1]"
         />
 
-        <div className="relative z-10 text-white text-center flex flex-col justify-center items-center border-2 h-full">
+        <div className="relative z-10 text-white text-center flex flex-col justify-center items-center  h-full">
           <p className="text-lg">Resolved</p>
           <p className="text-6xl font-bold">{resolvedData.length}</p>
         </div>

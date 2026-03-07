@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./Container";
 const Navbar = () => {
   return (
-    <div className="bg-gray-200 shadow-sm py-2">
+    <div className="bg-gray-100 shadow-sm py-2">
       {" "}
       <Container>
         <div className="navbar ">

@@ -30,7 +30,7 @@ const App = () => {
   if (error) return <p>Error :{error}</p>;
 
   return (
-    <div className="bg-amber-200">
+    <div className="bg-gray-200">
       <Navbar></Navbar>
 
       <MainContainer students={students}></MainContainer>

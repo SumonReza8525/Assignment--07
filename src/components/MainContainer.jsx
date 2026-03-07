@@ -43,7 +43,7 @@ const MainContainer = ({ students }) => {
       prev.map((item) => {
         if (item.id === id && item.status === "Resolved") {
           toast.error("Removed", {
-            toastId: `status-${id}`,
+            toastId: `status-${id}-remove`,
           });
 
           return {

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 // import Banner from "./components/Banner";
 import MainContainer from "./components/MainContainer";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [students, setStudents] = useState([]);
@@ -33,6 +34,7 @@ const App = () => {
       <Navbar></Navbar>
 
       <MainContainer students={students}></MainContainer>
+      <Footer></Footer>
     </div>
   );
 };

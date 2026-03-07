@@ -4,7 +4,7 @@ import Container from "./components/Container";
 // import Banner from "./components/Banner";
 import MainContainer from "./components/MainContainer";
 import Footer from "./components/Footer";
-
+import { ToastContainer } from "react-toastify";
 const App = () => {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -30,11 +30,12 @@ const App = () => {
   if (error) return <p>Error :{error}</p>;
 
   return (
-    <div className="">
+    <div className="bg-amber-200">
       <Navbar></Navbar>
 
       <MainContainer students={students}></MainContainer>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

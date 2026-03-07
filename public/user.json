@@ -3,7 +3,7 @@
     "id": 1001,
     "title": "Login Issues - Can't Access Account",
     "desc": "Customer cannot log in even after resetting the password multiple times.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "High",
     "user": "John Smith",
     "date": "2024-11-15"

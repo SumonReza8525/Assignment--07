@@ -1,16 +1,21 @@
 import React from "react";
 import calender from "../assets/calender.png";
+import { toast } from "react-toastify";
 const EachStudent = ({ student, setNewData }) => {
   const handleOpen = (id) => {
     setNewData((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              status: item.status === "Open" ? "In Progress" : item.status,
-            }
-          : item,
-      ),
+      prev.map((item) => {
+        if (item.id === id && item.status === "Open") {
+          toast.success("In Progress", {
+            toastId: `status-${id}-progress`,
+          });
+          return {
+            ...item,
+            status: "In Progress",
+          };
+        }
+        return item;
+      }),
     );
   };
 
@@ -18,7 +23,7 @@ const EachStudent = ({ student, setNewData }) => {
     <div
       onClick={() => handleOpen(student.id)}
       key={student.id}
-      className="bg-linear-to-br from-gray-100 to-[#14B8A6] rounded-lg px-3 py-5 space-y-2 cursor-pointer hover:scale-102 shadow-md shadow-gray-300 transition-all duration-200 ease-in-out"
+      className="bg-linear-to-br from-gray-100 to-[#14B8A6] rounded-lg px-3 py-5 space-y-2 cursor-pointer  shadow-md shadow-gray-300 transition-all duration-200 ease-in-out"
     >
       <div className="flex justify-between items-center gap-3">
         <h2 className="text-lg font-bold">{student.title}</h2>

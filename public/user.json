@@ -21,7 +21,7 @@
     "id": 1003,
     "title": "Unable to Download Invoice",
     "desc": "Customer cannot download the invoice from the billing section.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "user": "Michael Brown",
     "date": "2024-11-17"
@@ -30,7 +30,7 @@
     "id": 1004,
     "title": "Profile Image Not Updating",
     "desc": "User tries to upload a new profile image but it does not update.",
-    "status": "Resolved",
+    "status": "Open",
     "priority": "Low",
     "user": "Sophia Davis",
     "date": "2024-11-18"
@@ -48,7 +48,7 @@
     "id": 1006,
     "title": "Email Notifications Not Received",
     "desc": "User is not receiving account notification emails.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "user": "Olivia Martinez",
     "date": "2024-11-20"
@@ -66,7 +66,7 @@
     "id": 1008,
     "title": "Search Feature Not Working",
     "desc": "Users cannot find results when searching for products.",
-    "status": "Resolved",
+    "status": "Open",
     "priority": "Medium",
     "user": "Isabella Thomas",
     "date": "2024-11-22"
@@ -75,7 +75,7 @@
     "id": 1009,
     "title": "Error While Updating Address",
     "desc": "Customer receives an error when updating shipping address.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Low",
     "user": "William Taylor",
     "date": "2024-11-23"

@@ -1,10 +1,24 @@
 import React from "react";
 import calender from "../assets/calender.png";
-const EachStudent = ({ student }) => {
+const EachStudent = ({ student, setNewData }) => {
+  const handleOpen = (id) => {
+    setNewData((prev) =>
+      prev.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              status: item.status === "Open" ? "In Progress" : item.status,
+            }
+          : item,
+      ),
+    );
+  };
+
   return (
     <div
+      onClick={() => handleOpen(student.id)}
       key={student.id}
-      className="bg-gray-200 rounded-lg px-3 py-5 space-y-2 cursor-pointer hover:scale-102 shadow-md shadow-gray-300 transition-all duration-200 ease-in-out"
+      className="bg-linear-to-br from-gray-100 to-[#14B8A6] rounded-lg px-3 py-5 space-y-2 cursor-pointer hover:scale-102 shadow-md shadow-gray-300 transition-all duration-200 ease-in-out"
     >
       <div className="flex justify-between items-center gap-3">
         <h2 className="text-lg font-bold">{student.title}</h2>
@@ -23,7 +37,7 @@ const EachStudent = ({ student }) => {
         <div className="flex flex-col lg:flex-row justify-between  gap-3 ">
           <p className="text-xl font-bold ">ID : #{student.id}</p>
           <p
-            className={`text-lg font-semibold ${student.priority === "High" ? "text-red-500" : student.priority === "Medium" ? "text-amber-500" : "text-green-500"} `}
+            className={`text-lg font-semibold ${student.priority === "High" ? "text-red-500" : student.priority === "Medium" ? "text-amber-600" : "text-[#5254f8]"} `}
           >
             {`${student.priority} Priority`.toUpperCase()}
           </p>

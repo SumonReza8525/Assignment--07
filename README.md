@@ -1,16 +1,109 @@
-# React + Vite
+## 1. What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JSX or JavaScript XML** is a syntax used in React that allows you to write HTML-like code inside JavaScript.
 
-Currently, two official plugins are available:
+It makes React components easier to read and write because the UI structure looks similar to HTML.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Example:
 
-## React Compiler
+```javascript
+function App() {
+  return <h1>Hello World</h1>;
+}
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Why JSX is used:
 
-## Expanding the ESLint configuration
+- It makes UI code easier to understand.
+- It allows HTML structure directly in JavaScript.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 2. What is the difference between State and Props?
+
+Both **State** and **Props** are used to store data in React, but they are used in different ways.
+
+**Props**
+
+- Props are used to pass data from one component to another.
+- They are **read-only**, meaning a component cannot change its props.
+- Props shares data one-way.From parent to child.
+
+Example:
+
+```javascript
+function Greeting(props) {
+  return <h1>Hello {props.name}</h1>;
+}
+```
+
+**State**
+
+- State is used to store data that can change inside a component.
+- When state changes, the component re-renders automatically.
+
+Example:
+
+```javascript
+const [count, setCount] = useState(0);
+```
+
+## 3. What is the useState hook, and how does it work?
+
+`useState` is a React Hook that allows functional components to store and update state.
+
+It returns two things:
+
+1. The current state value
+2. A function to update that state
+
+Example:
+
+```javascript
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <button onClick={() => setCount(count + 1)}>Clicked {count} times</button>
+  );
+}
+```
+
+How it works:
+
+- `count` stores the current value.
+- `setCount` updates the value.
+- When `setCount` is called, React re-renders the component.
+
+---
+
+## 4. How can you share state between components in React?
+
+The most common way is **lifting state up**.
+
+This means moving the state to the **closest common parent component**, then passing the data to child components using props.
+
+Steps:
+
+1. Store the state in the **parent component**.
+2. Pass the state and update function to children using **props**.
+
+## 5. How is event handling done in React?
+
+Events are usually handled by passing a function to the event attribute.
+
+Example:
+
+```javascript
+function Button() {
+  const handleClick = () => {
+    alert("Button clicked");
+  };
+
+  return <button onClick={handleClick}>Click Me</button>;
+}
+```
+
+---
